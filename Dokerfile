@@ -1,0 +1,5 @@
+FROM centos:7
+LABEL name=ujjwal
+RUN yum install httpd -y
+COPY index.html  /var/www/html
+CMD ["/usr/bin/httpd","-D","FORGROUND"]
