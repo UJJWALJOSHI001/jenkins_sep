@@ -2,4 +2,4 @@ FROM centos:7
 LABEL name=ujjwal
 RUN yum install httpd -y
 COPY index.html  /var/www/html
-CMD ["httpd","-D","FORGROUND"]
+CMD ["httpd","-D","FOREGROUND"]
