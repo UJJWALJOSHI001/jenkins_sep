@@ -9,7 +9,7 @@ pipeline {
         }
         stage('docker build') {
             steps { 
-                sh 'sudo docker build  -t  pipe:v1 -f Dokerfile .'
+                sh 'sudo docker build  -t  pipe:v1  .'
             }
         }
          stage('docker rm') {
