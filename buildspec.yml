@@ -2,7 +2,7 @@
   pre_build:
     commands:
       - echo Logging in to Docker Hub...
-      - docker login -u ujjwaljoshi001 -p joshiujjwal1@          
+      - $(docker login -u ujjwaljoshi001 -p joshiujjwal1@)          
   build:
     commands:
       - echo Build started on `date`
