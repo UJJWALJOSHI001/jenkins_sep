@@ -19,7 +19,17 @@ pipeline {
         }
         stage('docker run') {
             steps {
-                sh 'sudo docker run -d --name pipe1  -p 8082:80 pipe:v1'
+                sh 'sudo docker run -d --name pipe1  -p 8082:80 username/pipe:v1'
+            }
+        }
+        stage('docker login') {
+            steps {
+                sh 'sudo docker login -u $(username) -p $(passwd)'
+            }
+        }
+        stage('docker run') {
+            steps {
+                sh 'sudo docker push username/pipe:v1'
             }
         }
         stage('print success') {
