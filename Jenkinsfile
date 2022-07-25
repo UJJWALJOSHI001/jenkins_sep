@@ -27,7 +27,7 @@ pipeline {
                 sh 'sudo docker login -u $(username) -p $(passwd)'
             }
         }
-        stage('docker run') {
+        stage('docker push') {
             steps {
                 sh 'sudo docker push username/pipe:v1'
             }
